@@ -11,3 +11,7 @@ def check_arg_length():
        sys.exit('Too many command-line arguments')
     else:
        return True
+
+
+def check_end():
+   return True if sys.argv[1].endswith('.py') else sys.exit('Not a python file')
