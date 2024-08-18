@@ -30,3 +30,7 @@ def arg_end():
 
 def arg_exist():
     return sys.argv[1] == None
+
+
+if __name__ == '__main__':
+    main()
