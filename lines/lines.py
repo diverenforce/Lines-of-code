@@ -12,6 +12,16 @@ def main():
     if arg_exist():
         sys.exit('File does not exist')
 
+    counter = 0
+    with open(sys.argv[1]) as File:
+        for line in File:
+            if line.isspace() or line[0] == '#':
+                continue
+            else:
+                counter += 1
+    
+    print(counter)
+
 def arg_length():
     return len(sys.argv) == 2
 
