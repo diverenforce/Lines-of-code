@@ -1,20 +1,22 @@
 import sys
 
 def main():
-    if check_arg_length() == False and sys.argv < 2:
+    if arg_length() == False and sys.argv < 2:
         sys.exit('Too few command-line arguments')
-    elif check_arg_length() == False and sys.argv > 2:
+    elif arg_length() == False and sys.argv > 2:
         sys.exit('Too many command-line arguments')
 
-    if check_end() != True:
+    if arg_end() != True:
        sys.exit('Not a python file')
+    
+    if arg_exist():
+        sys.exit('File does not exist')
 
-       
-
-
-def check_arg_length():
+def arg_length():
     return len(sys.argv) == 2
 
-def check_end():
+def arg_end():
    return sys.argv[1].endswith('.py')
 
+def arg_exist():
+    return sys.argv[1] == None
