@@ -1,9 +1,9 @@
 import sys
 
 def main():
-    if arg_length() == False and sys.argv < 2:
+    if arg_length() == False and len(sys.argv) < 2:
         sys.exit('Too few command-line arguments')
-    elif arg_length() == False and sys.argv > 2:
+    elif arg_length() == False and len(sys.argv) > 2:
         sys.exit('Too many command-line arguments')
 
     if arg_end() != True:
