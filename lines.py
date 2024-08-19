@@ -15,7 +15,7 @@ def main():
     counter = 0
     with open(sys.argv[1]) as File:
         for line in File:
-            if line.isspace() or line[0] == '#':
+            if line.isspace() or line.lstrip().startswith('#'):
                 continue
             else:
                 counter += 1
